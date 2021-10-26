@@ -106,10 +106,7 @@ form.example input[type=text] {
       width:27%;
       margin-right:3%;
   }
-  .side-filter > h3 {
-    
-  }
-
+  
   .filter-bar li {
     padding-left: 0;
     list-style-type: none;
