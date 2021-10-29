@@ -25,37 +25,36 @@
     </header>
 
 
-    <nav class="flex px-5 py-3" id="navbar">
+    <nav class="flex px-5 pt-4 pb-3" id="navbar">
       <img src="./img/logo.svg">
-      <ul class="uppercase">
-        
+      <ul class="uppercase l-space">
         <li>shop</li>
-        <li>real winter</li>
+        <li class="red">real winter</li>
         <li>complementos</li>
         <li>editoriales</li>
       </ul>
-
-      <div class="" id="nav-seach">
-        <ul>
-          <li>Buscar</li>
-          <li>ingresar</li>
-          <li>carrito</li>
-        </ul>
-      </div>
-
+      <ul class="flex align-items text-muted">
+        <form class="example" action="/action_page.php" style="margin:auto;max-width:140px">
+          <input type="text" placeholder="Buscar" name="search2">
+          <button type="submit"><i class="fa fa-search"></i></button>
+        </form>
+        <li>ingresar</li>
+        <li>carrito</li>
+        <img src="./img/shop.svg" alt="">
+      </ul>
     </nav>
-    <div class="main-title px-5">
-      <h5>invierno 2020</h5>
-      <h1>Título de categoria</h1>
+    <div class="main-title px-5 pt-4 pb-2">
+      <h6 class="very-small">Invierno 2020</h6>
+      <h2>Título de categoría</h2>
     </div>
 
-    <main class="px-5 flex">
+    <main class="px-5 flex border-bottom">
       
       <div class="side-filter pt-4">
         <h6 class="uppercase border-bottom">Filtrar por</h6>
         
         <ul class="filter-bar p-0">
-          <button class="collapsible">Talle</button>
+          <button class="collapsible border-bottom">Talle</button>
           <div class="content">
             <form>
               <input type="radio" id="35" name="fav_language" value="35">
@@ -72,7 +71,7 @@
               <label for="37">37</label><br>
             </form>
           </div>
-          <button class="collapsible">Color</button>
+          <button class="collapsible border-bottom">Color</button>
           <div class="content">
             <form>
               <input type="radio" id="Amarillo" name="fav_language" value="Amarillo">
@@ -97,7 +96,7 @@
               <label for="Vision">Vision</label><br>
             </form>
           </div>
-          <button class="collapsible">Precio</button>
+          <button class="collapsible border-bottom">Precio</button>
           <div class="content">
             <form>
               <input type="radio" id="$2000-$3000" name="fav_language" value="$2000-$3000">
@@ -109,12 +108,12 @@
           
           
           
-          <li>Temporada</li>
-          <li>Material</li>
+          <button class="collapsible border-bottom">Temporada</button>
+          <button class="collapsible border-bottom">Material</button>
         </ul>
       </div>
       <div class="grid-main">
-        <div class="flex flex-justify-content-space pt-3">
+        <div class="flex flex-justify-content-space pt-4">
           <p>6 productos</p>
           <p>ordenar por: relevancia</p>
         </div>
@@ -130,7 +129,11 @@
           <div class="item">
             <div class="img-placeholder"></div>
             <p>Lorem ipsum dolor sit amet</p>
-            <p>$2.299,00</p>
+            <div>
+              <p class="promo promo-old">$3.299,00</p>
+              <p class="promo">$2.299,00</p>
+            </div>
+            <p class="red">Hasta <b>12 cuotas</b></p>
           </div>
 
           <div class="item">
@@ -142,22 +145,34 @@
           <div class="item">
             <div class="img-placeholder"></div>
             <p>Lorem ipsum dolor sit amet</p>
-            <p>$2.299,00</p>
+            <div>
+              <p class="promo promo-old">$3.299,00</p>
+              <p class="promo">$2.299,00</p>
+            </div>
+            <p class="red">Hasta <b>12 cuotas</b></p>
           </div>
 
           <div class="item">
             <div class="img-placeholder"></div>
             <p>Lorem ipsum dolor sit amet</p>
-            <p>$2.299,00</p>
+            <div>
+              <p class="promo promo-old">$3.299,00</p>
+              <p class="promo">$2.299,00</p>
+            </div>
+            <p class="red">Hasta <b>12 cuotas</b></p>
           </div>
 
           <div class="item">
             <div class="img-placeholder"></div>
             <p>Lorem ipsum dolor sit amet</p>
-            <p>$2.299,00</p>
+            <div>
+              <p class="promo promo-old">$3.299,00</p>
+              <p class="promo">$2.299,00</p>
+            </div>
+            <p class="red">Hasta <b>12 cuotas</b></p>
           </div>
 
-      <button class="btn btn-primary btn-dark mt-3">Ver mas productos</button>
+      <button class="btn btn-primary mx-auto btn-dark mt-3 mb-3">Ver mas productos</button>
       </div>
     </main>
     <footer class="flex flex-justify-content-center pt-5">
