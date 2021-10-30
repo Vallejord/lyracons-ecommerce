@@ -36,7 +36,7 @@
             <a href="#">Camperas</a>
           </div>
         </div> 
-        <li class="red">real winter</li>
+        <li class="red" id="trigger">real winter</li>
         <li>complementos</li>
         <li>editoriales</li>
       </ul>
@@ -52,7 +52,7 @@
     </nav>
     <div class="main-title px-5 pt-4 pb-2">
       <h6 class="very-small">Invierno 2020</h6>
-      <h2>Título de categoría</h2>
+      <h2 id="colortarget">Título de categoría</h2>
     </div>
 
     <main class="px-5 flex border-bottom">
@@ -217,6 +217,21 @@
           } 
         });
       }
+      </script>
+      <script>
+        const hoverTrigger = document.getElementById("trigger");
+        const colorTarget = document.getElementById("colortarget");
+
+        hoverTrigger.addEventListener("mouseover", mouseOver);
+        hoverTrigger.addEventListener("mouseout", mouseOut);
+
+        function mouseOver() {
+          colorTarget.style.color = "red";
+        }
+
+        function mouseOut() {
+          colorTarget.style.color = "black";
+        }
       </script>
   </body>
 </html>
