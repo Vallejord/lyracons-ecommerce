@@ -45,7 +45,7 @@
           <input type="text" placeholder="Buscar" name="search2">
           <button type="submit"><i class="fa fa-search"></i></button>
         </form>
-        <li>ingresar</li>
+        <li><a id="log-in">ingresar</a></li>
         <li>carrito</li>
         <img src="./img/shop.svg" alt="">
       </ul>
@@ -125,7 +125,7 @@
           <p>ordenar por: relevancia</p>
         </div>
 
-        <div class="grid-container text-center">
+        <div class="grid-container text-center" id="main-product-grid">
           
           <div class="item">
             <div class="img-placeholder"></div>
@@ -219,6 +219,7 @@
       }
       </script>
       <script>
+        // cambio de color de titulo de categoria 
         const hoverTrigger = document.getElementById("trigger");
         const colorTarget = document.getElementById("colortarget");
 
@@ -232,6 +233,15 @@
         function mouseOut() {
           colorTarget.style.color = "black";
         }
+      </script>
+      <script>
+         const logIn = document.getElementById("log-in");
+         const mainProductGrid = document.getElementById("main-product-grid");       
+         logIn.addEventListener("click", changeDisplay);
+         function changeDisplay() {
+           mainProductGrid.classList.toggle("invisible");
+        }
+         l
       </script>
   </body>
 </html>

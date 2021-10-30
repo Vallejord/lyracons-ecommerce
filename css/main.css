@@ -291,3 +291,8 @@ nav ul li {
   
   /* Change the background color of the dropdown button when the dropdown content is shown */
   .dropdown:hover .dropbtn {background-color: #f1f1f1;}
+
+
+  .invisible{
+    display:none;
+  }
