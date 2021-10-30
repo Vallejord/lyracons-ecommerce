@@ -101,7 +101,7 @@ nav ul li {
       flex: 0 0 33.333333%;
       /* width: 289px; */
       height: 515px;
-      padding: 5px;
+      padding: 2px;
       text-align: left;
   }
   .item p {
@@ -251,3 +251,43 @@ nav ul li {
     transform: rotate(-45deg);
     -webkit-transform: rotate(-45deg);
   }
+
+
+  /* hoverable dropdown */
+  /*the dropdown item*/
+  .dropbtn {
+    padding:16px;
+    border: none;
+  }
+  /* the container oof the dropdown content*/
+  .dropdown {
+    position:relative;
+    display: inline-block;
+  }
+
+  /* content of dropdowm */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+
+  /* links of the dropdown content*/
+  .dropdown-content a {
+    color:black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+
+  /* dropdowns link hover */
+  .dropdown-content a:hover {background-color: #ddd;}
+
+  /* Show the dropdown menu on hover */
+  .dropdown:hover .dropdown-content {display: block;}
+  
+  /* Change the background color of the dropdown button when the dropdown content is shown */
+  .dropdown:hover .dropbtn {background-color: #f1f1f1;}
