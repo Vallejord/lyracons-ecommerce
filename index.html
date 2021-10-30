@@ -26,10 +26,10 @@
 
 
     <nav class="flex px-5 pt-4 pb-3" id="navbar">
-      <img src="./img/logo.svg">
-      <ul class="uppercase l-space">
+      <a id="mainlogo"><img src="./img/logo.svg"></a>
+      <ul class="uppercase l-space nav-menu">
         <div class="dropdown">
-          <li class="dropbtn">shop</li>
+          <li class="dropbtn nav-item">shop</li>
           <div class="dropdown-content">
             <a href="#">Pantalones</a>
             <a href="#">Remeras</a>
@@ -37,11 +37,11 @@
           </div>
         </div> 
         <li class="red" id="trigger">real winter</li>
-        <li>complementos</li>
+        <li class="">complementos</li>
         <li>editoriales</li>
       </ul>
       <ul class="flex align-items text-muted">
-        <form class="example" action="/action_page.php" style="margin:auto;max-width:140px">
+        <form class="example" style="margin:auto;max-width:140px">
           <input type="text" placeholder="Buscar" name="search2">
           <button type="submit"><i class="fa fa-search"></i></button>
         </form>
@@ -49,6 +49,11 @@
         <li>carrito</li>
         <img src="./img/shop.svg" alt="">
       </ul>
+      <div class="hamburger">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+    </div>
     </nav>
     <div class="main-title px-5 pt-4 pb-2">
       <h6 class="very-small">Invierno 2020</h6>
@@ -58,7 +63,7 @@
     <main class="px-5 flex border-bottom">
       
       <div class="side-filter pt-4">
-        <h6 class="uppercase border-bottom">Filtrar por</h6>
+        <h6 class="uppercase border-bottom" data-bs-toggle="modal" data-bs-target="#myModal">Filtrar por</h6>
         
         <ul class="filter-bar p-0">
           <button class="collapsible border-bottom">Talle</button>
@@ -199,6 +204,31 @@
         </div>
       </div>
     </footer>
+
+    <!-- The Modal -->
+<div class="modal" id="myModal">
+  <div class="modal-dialog modal-fullscreen">
+    <div class="modal-content">
+
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <h4 class="modal-title">Modal Heading</h4>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+
+      <!-- Modal body -->
+      <div class="modal-body">
+        Modal body..
+      </div>
+
+      <!-- Modal footer -->
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+      </div>
+
+    </div>
+  </div>
+</div>
     <!-- Option 1: Bootstrap Bundle with Popper -->
     
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
@@ -241,7 +271,18 @@
          function changeDisplay() {
            mainProductGrid.classList.toggle("invisible");
         }
-         l
+         
+      </script>
+      <script>
+        const hamburger = document.querySelector(".hamburger");
+        const navMenu = document.querySelector(".nav-menu");
+
+        hamburger.addEventListener("click", mobileMenu);
+
+        function mobileMenu() {
+        hamburger.classList.toggle("active");
+        navMenu.classList.toggle("active");
+       }
       </script>
   </body>
 </html>
