@@ -27,32 +27,34 @@ body {
 .flex-justify-content-space {
     justify-content: space-between;
 }
-.border-bottom {
-    border-bottom: 1px solid lightgray;
-}
+
 .border-test {
     border: 2px solid red;
 } 
 
+/* ----   text and fonts   ----- */
 .l-space {
   letter-spacing: 2px;
+}
+.small {
+  font-size: 12px;
 }
 .very-small{
   font-size: 10px;
 }
 
 /* ----    Componentes    ----*/
+
+ /* ----  black banner promo ---- */
 header {
     font-size: 12px;
 }
+
+/* ----   main nav   ---- */
 #navbar {
     font-size:14px;
-    align-items: center;
-    border-bottom: 1px solid lightgray;
 }
-#nav-search {
-    
-}
+
 
 nav ul {
     list-style-type: none;
@@ -67,11 +69,113 @@ nav ul li {
     display: inline-block;
     padding: 0 5px;
 }
-  
 
-  .main-title {
-    border-bottom: 1px solid lightgray;
+ul li a {
+  cursor:pointer;
+}
+
+/* hoverable dropdown */
+
+/*the dropdown item*/
+.dropbtn {
+  padding:16px;
+  border: none;
+}
+
+/* the container oof the dropdown content*/
+.dropdown {
+   position:relative;
+   display: inline-block;
+}
+
+/* content of dropdowm */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+  /* links of the dropdown content*/
+  .dropdown-content a {
+    color:black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
   }
+
+  /* dropdowns link hover */
+  .dropdown-content a:hover {background-color: #ddd;}
+
+  /* Show the dropdown menu on hover */
+  .dropdown:hover .dropdown-content {display: block;}
+  
+  /* Change the background color of the dropdown button when the dropdown content is shown */
+  .dropdown:hover .dropbtn {background-color: #f1f1f1;}
+
+/* search form */
+form.example {
+  max-width:140px;
+  margin-left:auto;
+}
+form.example input[type=text] {
+  padding: 0;
+  font-size: 17px;
+  float: left;
+  width: 80%;
+  background:white;
+  border-top-style: hidden;
+  border-right-style: hidden;
+  border-left-style: hidden;
+  border-bottom-style: groove;
+  background-color: white;
+      
+}
+form.example input::placeholder {
+  font-size: 12px;
+  text-align: left;
+  color: gray;
+}
+
+form.example button {
+  
+  float: left;
+  width: 20%;
+  padding: 0;
+  background: white;
+  color: grey;
+  font-size: 17px;
+  
+  border-left: none;
+  cursor: pointer;
+  border-top-style: hidden;
+  border-right-style: hidden;
+  border-left-style: hidden;
+  border-bottom-style: groove;
+  background-color: white;
+}
+
+form.example button:hover {
+  background: white;
+}
+
+
+.no-outline:focus {
+  outline: none;
+}
+
+
+
+
+
+
+
+
+.main-title {
+  border-bottom: 1px solid lightgray;
+}
 
   h5::before {
     content: url(":/img/arrow.svg");
@@ -89,7 +193,7 @@ nav ul li {
   }
 
   .grid-main {
-    width: 70%;
+    width: 80%;
        
    }
   .grid-container {
@@ -110,8 +214,8 @@ nav ul li {
    
   .img-placeholder {
     background-color: #9FA9AE;
-     width: 100%;
-     height: 75%;
+     width: 289px;
+     height: 419px;
   }
 
   .promo {
@@ -186,56 +290,7 @@ nav ul li {
     transition: max-height 0.2s ease-out;
     }
 
-  /* search form */
-  form.example input[type=text] {
-    padding: 0;
-    font-size: 17px;
-    float: left;
-    width: 80%;
-    background:white;
-    border-top-style: hidden;
-          border-right-style: hidden;
-          border-left-style: hidden;
-          border-bottom-style: groove;
-          background-color: white;
-        
-  }
-  form.example input::placeholder {
-    font-size: 14px;
-    text-align: left;
-    color: gray;
-  }
   
-  form.example button {
-    
-    float: left;
-    width: 20%;
-    padding: 0;
-    background: white;
-    color: grey;
-    font-size: 17px;
-    
-    border-left: none;
-    cursor: pointer;
-    border-top-style: hidden;
-          border-right-style: hidden;
-          border-left-style: hidden;
-          border-bottom-style: groove;
-          background-color: white;
-  }
-  
-  form.example button:hover {
-    background: white;
-  }
-  
-  form.example::after {
-    content: "";
-    clear: both;
-    display: table;
-  }
-  .no-outline:focus {
-    outline: none;
-  }
   .red{
     color:red;
   }
@@ -253,45 +308,7 @@ nav ul li {
   }
 
 
-  /* hoverable dropdown */
-  /*the dropdown item*/
-  .dropbtn {
-    padding:16px;
-    border: none;
-  }
-  /* the container oof the dropdown content*/
-  .dropdown {
-    position:relative;
-    display: inline-block;
-  }
-
-  /* content of dropdowm */
-  .dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f1f1f1;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-  }
-
-  /* links of the dropdown content*/
-  .dropdown-content a {
-    color:black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-  }
-
-  /* dropdowns link hover */
-  .dropdown-content a:hover {background-color: #ddd;}
-
-  /* Show the dropdown menu on hover */
-  .dropdown:hover .dropdown-content {display: block;}
   
-  /* Change the background color of the dropdown button when the dropdown content is shown */
-  .dropdown:hover .dropbtn {background-color: #f1f1f1;}
-
 
   .invisible{
     display:none;
@@ -312,19 +329,25 @@ nav ul li {
   transition: all 0.3s ease-in-out;
   background-color: #101010;
 }
-.nav-menu {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
+
 
 .nav-link:hover{
   color: #482ff7;
 }
 
 @media only screen and (max-width: 768px) {
+
+  #navbar{
+    justify-content: space-between;
+  }
+  ul.flex.align-items.text-muted {
+    display: none;
+  }
   #mainlogo {
     order:2;
+  }
+  #shop{
+    order:4;
   }
   .nav-menu {
       order: 1;
@@ -355,7 +378,7 @@ nav ul li {
       cursor: pointer;
   }
 
-  // Inside the Media Query.
+  /* // Inside the Media Query. */
 
     .hamburger.active .bar:nth-child(2) {
         opacity: 0;

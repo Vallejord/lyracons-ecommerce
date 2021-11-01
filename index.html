@@ -14,6 +14,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,400;1,700&display=swap" rel="stylesheet">
+
+    
     <!-- Font-awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Lyracon ecommerce challenge</title>
@@ -25,28 +27,28 @@
     </header>
 
 
-    <nav class="flex px-5 pt-4 pb-3" id="navbar">
+    <nav class="flex align-items px-5 pt-4 pb-3 border-bottom" id="navbar">
       <a id="mainlogo"><img src="./img/logo.svg"></a>
-      <ul class="uppercase l-space nav-menu">
+      <ul class="flex flex-justify-content-center align-items text-uppercase l-space nav-menu">
         <div class="dropdown">
-          <li class="dropbtn nav-item">shop</li>
+          <li class="dropbtn nav-item"><a>shop</a></li>
           <div class="dropdown-content">
             <a href="#">Pantalones</a>
             <a href="#">Remeras</a>
             <a href="#">Camperas</a>
           </div>
         </div> 
-        <li class="red" id="trigger">real winter</li>
-        <li class="">complementos</li>
-        <li>editoriales</li>
+        <li class="red" id="trigger"><a>real winter</a></li>
+        <li><a>complementos</a></li>
+        <li><a>editoriales</a></li>
       </ul>
-      <ul class="flex align-items text-muted">
-        <form class="example" style="margin:auto;max-width:140px">
-          <input type="text" placeholder="Buscar" name="search2">
+      <ul class="flex align-items flex-grow-1  text-muted text-uppercase">
+        <form class="example">
+          <input type="text" placeholder="BUSCAR" name="search2">
           <button type="submit"><i class="fa fa-search"></i></button>
         </form>
-        <li><a id="log-in">ingresar</a></li>
-        <li>carrito</li>
+        <li class="small px-3"><a id="log-in">ingresar</a></li>
+        <li class="small"><a>carrito</a></li>
         <img src="./img/shop.svg" alt="">
       </ul>
       <div class="hamburger">
@@ -54,8 +56,8 @@
         <span class="bar"></span>
         <span class="bar"></span>
       </div>
-      <img src="./img/search.svg" class="hamburguer" alt="">
-      <img src="./img/shop.svg" class="hamburger" alt="">
+      <img src="./img/search.svg" class="hamburger" alt="">
+      <img src="./img/shop.svg" class="hamburger" id="shop"alt="">
     </nav>
     <div class="main-title px-5 pt-4 pb-2">
       <h6 class="very-small">Invierno 2020</h6>
@@ -186,7 +188,7 @@
             <p class="red">Hasta <b>12 cuotas</b></p>
           </div>
 
-      <button class="btn btn-primary mx-auto btn-dark mt-3 mb-3">Ver más productos</button>
+          <button class="btn btn-primary mx-auto btn-dark mt-3 mb-3" id="add-button">Ver más productos</button>
       </div>
     </main>
     <footer class="flex flex-justify-content-center pt-5">
@@ -261,57 +263,6 @@
     <!-- Option 1: Bootstrap Bundle with Popper -->
     
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-    <script>
-      var coll = document.getElementsByClassName("collapsible");
-      var i;
-      
-      for (i = 0; i < coll.length; i++) {
-        coll[i].addEventListener("click", function() {
-          this.classList.toggle("active");
-          var content = this.nextElementSibling;
-          if (content.style.maxHeight){
-            content.style.maxHeight = null;
-          } else {
-            content.style.maxHeight = content.scrollHeight + "px";
-          } 
-        });
-      }
-      </script>
-      <script>
-        // cambio de color de titulo de categoria 
-        const hoverTrigger = document.getElementById("trigger");
-        const colorTarget = document.getElementById("colortarget");
-
-        hoverTrigger.addEventListener("mouseover", mouseOver);
-        hoverTrigger.addEventListener("mouseout", mouseOut);
-
-        function mouseOver() {
-          colorTarget.style.color = "red";
-        }
-
-        function mouseOut() {
-          colorTarget.style.color = "black";
-        }
-      </script>
-      <script>
-         const logIn = document.getElementById("log-in");
-         const mainProductGrid = document.getElementById("main-product-grid");       
-         logIn.addEventListener("click", changeDisplay);
-         function changeDisplay() {
-           mainProductGrid.classList.toggle("invisible");
-        }
-         
-      </script>
-      <script>
-        const hamburger = document.querySelector(".hamburger");
-        const navMenu = document.querySelector(".nav-menu");
-
-        hamburger.addEventListener("click", mobileMenu);
-
-        function mobileMenu() {
-        hamburger.classList.toggle("active");
-        navMenu.classList.toggle("active");
-       }
-      </script>
+    <script src="./js/functions.js"></script>
   </body>
 </html>
