@@ -32,8 +32,13 @@
           console.log(element);
           let productTemplate = document.getElementById("productTemplate");//corregir nombre con guiones
           let productTemplateClone = productTemplate.cloneNode(true);
-          productTemplateClone.getElementsByClassName("image-template")[0].setAttribute("src",element.imageSrc) //[0] porque la busqueda genera un array con todos los resultados
+          productTemplateClone.getElementsByClassName("image-template")[0].setAttribute("src",element.imageSrc); //[0] porque la busqueda genera un array con todos los resultados
+          productTemplateClone.getElementsByClassName("name")[0].innerHTML = element.name;
+          productTemplateClone.getElementsByClassName("list-price")[0].innerHTML = element.listPrice;
+          productTemplateClone.getElementsByClassName("best-price")[0].innerHTML = element.bestPrice;
+          productTemplateClone.getElementsByClassName("fees")[0].innerHTML = element.fees
           productTemplateClone.classList.remove("invisible");
+          productTemplateClone.classList.add("item");
           document.getElementById('main-product-grid').appendChild(productTemplateClone);
           
 
@@ -154,6 +159,8 @@
           <button class="collapsible border-bottom">Material</button>
         </ul>
       </div>
+
+
       <div class="grid-main">
         <div class="flex flex-justify-content-space pt-4">
           <p>6 productos</p>
@@ -215,7 +222,9 @@
             </div>
             <p class="red">Hasta <b>12 cuotas</b></p>
           </div>
-          <button class="btn btn-primary mx-auto btn-dark mt-3 mb-3" id="add-button" onclick="displayMoreProducts()">Ver más productos</button>
+          
+      </div>
+      <button class="btn btn-primary btn-dark" id="add-button" onclick="displayMoreProducts()">Ver más productos</button>
       </div>
     </main>
     <footer class="flex flex-justify-content-center pt-5">
@@ -288,7 +297,7 @@
   </div>
 </div>
 
-    <div id="productTemplate" class="invisible">
+    <!--div id="productTemplate" class="invisible">
 
       <div class="img-placeholder">
         <img class="image-template">
@@ -296,7 +305,18 @@
       <p class="description"></p>
       <p class="price"></p>
     
+    </div-->
+
+    <div id="productTemplate" class="invisible">
+      <img class="image-template">
+      <p class="name"></p>
+      <div>
+        <p class="promo promo-old list-price"></p>
+        <p class="promo best-price"></p>
+      </div>
+      <p class="red">Hasta <b><span class="fees"></span> cuotas</b></p>
     </div>
+    
 
     <!-- Option 1: Bootstrap Bundle with Popper -->
     
