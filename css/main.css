@@ -1,6 +1,7 @@
 *{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 body {
@@ -14,16 +15,20 @@ body {
 .flex {
     display:flex;
 }
+
 .flex-column {
     display: flex;
     flex-direction: column;
 }
+
 .align-items{
     align-items: center;
 }
+
 .flex-justify-content-center {
     justify-content: center;
 }
+
 .flex-justify-content-space {
     justify-content: space-between;
 }
@@ -32,9 +37,14 @@ body {
     border: 2px solid red;
 } 
 
+
+
 /* ----   text and fonts   ----- */
 .l-space {
   letter-spacing: 2px;
+}
+.l-space-sm {
+  letter-spacing: 0.7px;
 }
 .small {
   font-size: 12px;
@@ -166,105 +176,115 @@ form.example button:hover {
   outline: none;
 }
 
-
-
-
-
-
-
-
 .main-title {
   border-bottom: 1px solid lightgray;
 }
 
-  h5::before {
-    content: url(":/img/arrow.svg");
-  }
+h5::before {
+  content: url("./img/arrow.svg");
+}
 
-  .side-filter {
-      width:23%;
-      margin-right:3%;
-  }
-  
-  .filter-bar li {
-    padding-left: 0;
-    list-style-type: none;
-    border-bottom: 1px solid lightgray;
-  }
+.side-filter {
+    width:23%;
+    margin-right:3%;
+}
 
-  .grid-main {
+.filter-bar li {
+  padding-left: 0;
+  list-style-type: none;
+  border-bottom: 1px solid lightgray;
+}
+
+.grid-main {
     width: 80%;
-       
-   }
-  .grid-container {
-    display: flex;
-    
-    flex-wrap: wrap;
-  }
-  .item{
-      flex: 0 0 33.333333%;
-      /* width: 289px; */
-      height: 515px;
-      padding: 2px;
-      text-align: left;
-  }
-  .item p {
-      margin: 0;
-  }
-   
-  .img-placeholder {
-    background-color: #9FA9AE;
-     width: 289px;
-     height: 419px;
-  }
 
-  .promo {
-     display:inline;
-    }
+}
+.grid-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.item{
+  flex: 0 0 33.333333%;
+/* width: 289px; */
+  height: 515px;
+  padding: 2px;
+  text-align: left;
+}
+.item p {
+  margin: 0;
+  /* font-size: 12px; */
+}
+.product-name {
+  font-size: 12px;
+}
+
+.img-placeholder {
+  background-color: #9FA9AE;
+  width: 289px;
+  height: 419px;
+}
+
+.promo {
+  display:inline;
+  font-size: 14px;
+}
 
 .promo-old {
   text-decoration: line-through;
-  font-size: 10px;
+  font-size: 12px;
+  color: grey;
+  margin-right: 10px !important;
+}
+.fees {
+  font-size: 12px;
 }
 
-  .footer-nav{
-    line-height: 3rem;
-    font-size: 12px;
-    letter-spacing: 5.2px;
+
+/* footer */
+
+.footer-nav{
+  line-height: 2.5rem;
+  font-size: 12px;
+  letter-spacing: 5.2px;
 }
+
 .footer-form input {
-    width: 100%;
+  width: 100%;
 }
   
-
+#add-button {
+  width: 180px;
+  font-size: 12px;
+}
 
 /* ----    Fonts  & styles   ----*/
 
 .uppercase {
-    text-transform: uppercase;
+  text-transform: uppercase;
 }
 .text-left {
- text-align: left;
+  text-align: left;
 }
 
 ::placeholder {
-    text-align: center;  
+  text-align: center;  
 }
 
 
 /* test */
 /* filter colapse */
 .collapsible {
-    background-color: white;
-    color: black;
-    cursor: pointer;
-    padding: 18px;
-    padding-left:0;
-    width: 100%;
-    border: none;
-    text-align: left;
-    outline: none;
-    font-size: 15px;
+  background-color: white;
+  color: black;
+  cursor: pointer;
+  padding: 18px;
+  padding-left:0;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
   }
   
   .active, .collapsible:hover {
@@ -307,17 +327,9 @@ form.example button:hover {
     -webkit-transform: rotate(-45deg);
   }
 
-
-  
-
-  .invisible{
-    display:none;
-  }
-
-
   /* mobile navbar */
-  .hamburger {
-    display: none;
+.hamburger {
+  display: none;
 }
 
 .bar {
@@ -335,62 +347,110 @@ form.example button:hover {
   color: #482ff7;
 }
 
+/* breakpoints  */
+
 @media only screen and (max-width: 768px) {
+#fixed {
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  background:white;
+}
 
-  #navbar{
-    justify-content: space-between;
-  }
-  ul.flex.align-items.text-muted {
-    display: none;
-  }
-  #mainlogo {
-    order:2;
-  }
-  #shop{
-    order:4;
-  }
-  .nav-menu {
-      order: 1;
-      position: fixed;
-      left: -100%;
-      top: 5rem;
-      flex-direction: column;
-      background-color: #fff;
-      width: 100%;
-      border-radius: 10px;
-      text-align: center;
-      transition: 0.3s;
-      box-shadow:
-          0 10px 27px rgba(0, 0, 0, 0.05);
-  }
 
-  .nav-menu.active {
-      left: 0;
-      top: 0;
-  }
+header {
+  flex-direction: column;
+  align-items: center;
+}
 
-  .nav-item {
-      margin: 2.5rem 0;
-  }
+div.main-title {
+  margin-top: 120px;
+}
 
-  .hamburger {
-      display: block;
-      cursor: pointer;
-  }
+#hidden-bar{
+  display: flex;
+  width: 100%;
+}
 
-  /* // Inside the Media Query. */
+#hidden-bar div {
+  border: 2px solid black;
+  width: 50%;
+  text-align: center;
+  padding: 20px;
+}
 
-    .hamburger.active .bar:nth-child(2) {
-        opacity: 0;
-    }
+#hidden-bar div:first-child {
+  border-left: none;
+}
 
-    .hamburger.active .bar:nth-child(1) {
-        transform: translateY(8px) rotate(45deg);
-    }
+#hidden-bar div:last-child {
+  border-right: none;
+}
 
-    .hamburger.active .bar:nth-child(3) {
-        transform: translateY(-8px) rotate(-45deg);
-    }
+  /* navbar */
+#navbar{
+  justify-content: space-between;
+}
+
+ul.flex.align-items.text-muted {
+  display: none;
+}
+
+#mainlogo {
+  order:2;
+}
+
+#shop{
+  order:4;
+}
+
+.nav-menu {
+  order: 1;
+  position: fixed;
+  left: -100%;
+  top: 5rem;
+  flex-direction: column;
+  background-color: #fff;
+  width: 100%;
+  border-radius: 10px;
+  text-align: center;
+  transition: 0.3s;
+  box-shadow:
+  0 10px 27px rgba(0, 0, 0, 0.05);
+}
+
+.nav-menu.active {
+  left: 0;
+  top: 0;
+}
+
+.nav-item {
+  margin: 2.5rem 0;
+}
+
+.hamburger {
+  display: block;
+  cursor: pointer;
+}
+
+/* // Inside the Media Query. */
+
+.hamburger.active .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active .bar:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.hamburger.active .bar:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+div.side-filter,#product-count {
+  display: none;
+}
+
 
 }
 
@@ -408,4 +468,8 @@ form.example button:hover {
   font-size: 16px;
   margin: 4px 2px;
   cursor: pointer;
+}
+
+.hide {
+  display: none;
 }
