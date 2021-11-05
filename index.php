@@ -29,16 +29,15 @@
       .then( data => {
           
         data.products.forEach(element => {//iterates array 
-          console.log(element);
           let productTemplate = document.getElementById("productTemplate");//corregir nombre con guiones
           let productTemplateClone = productTemplate.cloneNode(true);
           productTemplateClone.getElementsByClassName("image-template")[0].setAttribute("src",element.imageSrc); //[0] porque la busqueda genera un array con todos los resultados
+          //productTemplateClone.getElementsByClassName("image-template")[0].setAttribute("srcset",element.imageSrcMobile);
           productTemplateClone.getElementsByClassName("name")[0].innerHTML = element.name;
           productTemplateClone.getElementsByClassName("list-price")[0].innerHTML = element.listPrice;
           productTemplateClone.getElementsByClassName("best-price")[0].innerHTML = element.bestPrice;
           productTemplateClone.getElementsByClassName("fees")[0].innerHTML = element.fees
           productTemplateClone.classList.remove("invisible");
-          productTemplateClone.classList.add("item"); // quitar
           document.getElementById('main-product-grid').appendChild(productTemplateClone);
         });
         
@@ -54,7 +53,7 @@
     <!-- Container fluid de bootstrap 5 sirve para que ese div siempre este al 100% del ancho-->
     <header class="p-2 bg-dark text-white flex flex-justify-content-center">
       <p class="my-0"><b>¡Aprovechá la promo!</b></p> 
-      <p class="mb-0">Comprá hasta 12 cuotas sin interés</p>
+      <p class="mb-0 ms-2">Comprá hasta 12 cuotas sin interés</p>
     </header>
 
     <nav class="flex align-items px-5 pt-4 pb-3 border-bottom" id="navbar">
@@ -94,14 +93,19 @@
       <h6 class="very-small">Invierno 2020</h6>
       <h2 id="colortarget">Título de categoría</h2>
     </div>
-    <div class="hamburger" id="hidden-bar">
-      <div data-bs-toggle="modal" data-bs-target="#myModal"><a>filtrá por<a/></div>
-      <div><a>ordenar por</a></div>
+
+    <!--   HIDDEN FOR MOBILE -->
+    <div class="hamburger text-uppercase small" id="hidden-bar">
+      <div data-bs-toggle="modal" data-bs-target="#myModal"><a>filtrá por +</a></div>
+      <div><a>ordená por</a><img src="./img/arrow.svg" class="ms-1" alt=""></div>
     </div>
+    <div class="hamburger px-5 py-4">6 productos</div>
+
+    <!---   MAIN GRID DESKTOP ----->
     <main class="px-5 flex border-bottom">
       
       <div class="side-filter pt-4">
-        <h6 class="uppercase border-bottom" >Filtrar por</h6>
+        <h6 class="uppercase border-bottom">Filtrar por</h6>
         
         <ul class="filter-bar p-0">
           <button class="collapsible border-bottom">Talle</button>
@@ -214,8 +218,8 @@
         <div class="flex-column align-items pt-2 footer-form">
           <h4 class="fw-bold">News</h4>
           <p>Suscribite y entérate de las promos!</p>
-         <input type="text" placeholder="Escribí tu Mail">
-         <button class="btn btn-primary btn-dark my-3 text-uppercase">Suscribite</button>
+          <input type="text" placeholder="Escribí tu Mail">
+          <button class="btn btn-primary btn-dark my-3 text-uppercase">Suscribite</button>
         </div>
       </div>
     </footer>
@@ -277,8 +281,11 @@
 </div>
 
 
-    <div id="productTemplate" class="invisible">
-      <img class="image-template">
+    <div id="productTemplate" class="invisible item">
+      <img class="image-template"
+      sizes="(max-width: 600px) 480px,
+            800px"
+      >
       <p class="name"></p>
       <div>
         <p class="promo promo-old list-price"></p>

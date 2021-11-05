@@ -205,8 +205,8 @@ h5::before {
 
 .grid-main {
     width: 80%;
-
 }
+
 .grid-container {
   display: flex;
   flex-wrap: wrap;
@@ -214,15 +214,15 @@ h5::before {
 
 .item{
   flex: 0 0 33.333333%;
-/* width: 289px; */
-  height: 515px;
   padding: 2px;
   text-align: left;
 }
+
 .item p {
   margin: 0;
   /* font-size: 12px; */
 }
+
 .product-name {
   font-size: 12px;
 }
@@ -470,6 +470,32 @@ div.side-filter,#product-count {
   display: none;
 }
 
+.grid-main {
+  width: 100%;
+}
+
+/* items */
+
+.promo {
+  display: block;
+  padding-bottom: 5px;
+}
+.fees {
+  padding-bottom: 10px;
+}
+
+/* footer */
+
+.footer-nav {
+  font-size: 14px;
+}
+
+::placeholder{
+  text-align: left;
+}
+footer button.btn.btn-primary {
+  width: 100%;
+}
 
 }
 
