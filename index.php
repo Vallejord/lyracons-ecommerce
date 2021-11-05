@@ -226,39 +226,43 @@
     <div class="modal-content">
 
       <!-- Modal Header -->
-      <div class="modal-header">
-        <h4 class="modal-title">Fitrá</h4>
+      <div class="modal-header p-4 border-bottom-0">
+        <h4 class="modal-title">Filtrá por:</h4>
         <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
       </div>
 
       <!-- Modal body -->
-      <div class="modal-body">
+      <div class="modal-body p-4">
         <div id="talle">
-          <h5>Talle:</h5>
-          <div class="circle-containner">
-            <button class="button">36</button>
-            <button class="button">37</button>
-            <button class="button">38</button>
-            <button class="button">39</button>
-            <button class="button">40</button>
-            <button class="button">41</button>
-            <button class="button">42</button>
+          <h5 class="small">Talle:</h5>
+          <div class="circle-container">
+            <div class="button"><a>36</a></div>
+            <div class="button"><a>37</a></div>
+            <div class="button"><a>38</a></div>
+            <div class="button"><a>39</a></div>
+            <div class="button"><a>40</a></div>
+            <div class="button"><a>41</a></div>
+            <div class="button"><a>42</a></div>
+            <div class="button"><a>43</a></div>
           </div>
         </div>
-        <div id="color">
-          <h5>Color: Animal print negro</h5>
-          <button></button>
-          <button></button>
-          <button></button>
+        <div id="color" class="flex-column">
+          <h5 class="small pt-4">Color: Animal print negro</h5>
+          <div class="circle-container">
+            <div class="square-button"></div>
+            <div class="square-button"></div>
+            <div class="square-button"></div>
+          </div>
         </div>
         <div id="precio"> 
-          <h5>Precio:</h5>
+          <h5 class="small pt-4">Precio:</h5>
           <form>
             <input type="radio" id="$2000-$3000" name="fav_language" value="$2000-$3000">
             <label for="$2000-$3000">$2.000 - $.3000</label><br>
             <input type="radio" id="$3.000-$.4000" name="fav_language" value="$3.000-$.4000">
             <label for="$3.000-$.4000">$3.000 - $.4000</label><br>
           </form>
+          <button class="btn btn-primary">aplicar</button>
 
         </div>
       </div>
