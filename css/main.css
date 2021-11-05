@@ -39,6 +39,9 @@ body {
 
 
 
+
+
+
 /* ----   text and fonts   ----- */
 .l-space {
   letter-spacing: 2px;
@@ -141,8 +144,8 @@ form.example input[type=text] {
   border-left-style: hidden;
   border-bottom-style: groove;
   background-color: white;
-      
 }
+
 form.example input::placeholder {
   font-size: 12px;
   text-align: left;
@@ -157,7 +160,6 @@ form.example button {
   background: white;
   color: grey;
   font-size: 17px;
-  
   border-left: none;
   cursor: pointer;
   border-top-style: hidden;
@@ -171,10 +173,16 @@ form.example button:hover {
   background: white;
 }
 
-
 .no-outline:focus {
   outline: none;
 }
+
+ul img#cart {
+  position: relative;
+  bottom: 5px;
+  margin-left: 5px;
+}
+
 
 .main-title {
   border-bottom: 1px solid lightgray;
@@ -240,6 +248,10 @@ h5::before {
   font-size: 12px;
 }
 
+#add-button {
+  width: 180px;
+  font-size: 12px;
+}
 
 /* footer */
 
@@ -253,9 +265,9 @@ h5::before {
   width: 100%;
 }
   
-#add-button {
-  width: 180px;
+footer button.btn.btn-primary {
   font-size: 12px;
+  padding: 10px 25px;
 }
 
 /* ----    Fonts  & styles   ----*/
@@ -476,6 +488,10 @@ div.side-filter,#product-count {
   font-weight: bold;
   margin: 4px 2px;
   cursor: pointer;
+}
+
+.circle-container {
+  paddi
 }
 
 .button:hover, .square-button:hover {

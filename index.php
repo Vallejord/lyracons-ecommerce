@@ -77,9 +77,9 @@
           <input type="text" placeholder="BUSCAR" name="search2">
           <button type="submit"><i class="fa fa-search"></i></button>
         </form>
-        <li class="small px-3"><a id="log-in">ingresar</a></li>
-        <li class="small"><a>carrito</a></li>
-        <img src="./img/shop.svg" alt="">
+        <li class="small px-4"><a id="log-in">ingresar</a></li>
+        <li class="small p-0"><a>carrito</a></li>
+        <img src="./img/shop.svg" id="cart" alt="">
       </ul>
       <div class="hamburger">
         <span class="bar"></span>
@@ -212,10 +212,10 @@
           <a>Venta mayorista</a>
         </nav>
         <div class="flex-column align-items pt-2 footer-form">
-          <h4>News</h4>
+          <h4 class="fw-bold">News</h4>
           <p>Suscribite y entérate de las promos!</p>
          <input type="text" placeholder="Escribí tu Mail">
-         <button class="btn btn-primary btn-dark my-3">Suscribite</button>
+         <button class="btn btn-primary btn-dark my-3 text-uppercase">Suscribite</button>
         </div>
       </div>
     </footer>
@@ -233,9 +233,9 @@
 
       <!-- Modal body -->
       <div class="modal-body p-4">
-        <div id="talle">
+        <div id="talle" class="border-bottom">
           <h5 class="small">Talle:</h5>
-          <div class="circle-container">
+          <div class="circle-container pb-4">
             <div class="button"><a>36</a></div>
             <div class="button"><a>37</a></div>
             <div class="button"><a>38</a></div>
@@ -246,9 +246,9 @@
             <div class="button"><a>43</a></div>
           </div>
         </div>
-        <div id="color" class="flex-column">
+        <div id="color" class="flex-column border-bottom">
           <h5 class="small pt-4">Color: Animal print negro</h5>
-          <div class="circle-container">
+          <div class="circle-container pb-4">
             <div class="square-button"></div>
             <div class="square-button"></div>
             <div class="square-button"></div>
@@ -258,11 +258,11 @@
           <h5 class="small pt-4">Precio:</h5>
           <form>
             <input type="radio" id="$2000-$3000" name="fav_language" value="$2000-$3000">
-            <label for="$2000-$3000">$2.000 - $.3000</label><br>
+            <label for="$2.000-$3.000" class="ms-1">$2.000 - $.3000</label><br>
             <input type="radio" id="$3.000-$.4000" name="fav_language" value="$3.000-$.4000">
-            <label for="$3.000-$.4000">$3.000 - $.4000</label><br>
+            <label for="$3.000-$.4000" class="ms-1">$3.000 - $.4000</label><br>
           </form>
-          <button class="btn btn-primary">aplicar</button>
+          <button class="btn btn-outline-dark mt-2">Aplicar</button>
 
         </div>
       </div>
