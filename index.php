@@ -170,8 +170,8 @@
 
       <div class="grid-main flex-column">
         <div class="flex flex-justify-content-space pt-4" id="product-count">
-          <p>6 productos</p>
-          <p>ordenar por: relevancia</p>
+          <p class="uppercase small text-muted">6 productos</p>
+          <p><span class="uppercase small text-muted">ordenar por:</span> relevancia</p>
         </div>
         
         
