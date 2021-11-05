@@ -1,64 +1,73 @@
+/* RESET AND GLOBAL CONFIG */
+
 *{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  }
 
 body {
-    font-family: 'Montserrat', sans-serif;
-    max-width: 1280px;
-    margin: 0 auto;
+  font-family: 'Montserrat', sans-serif;
+  max-width: 1280px;
+  margin: 0 auto;
 }
 
 /* ----    Layout    ----*/
 
 .flex {
-    display:flex;
+  display:flex;
 }
 
 .flex-column {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .align-items{
-    align-items: center;
+  align-items: center;
 }
 
 .flex-justify-content-center {
-    justify-content: center;
+  justify-content: center;
 }
 
 .flex-justify-content-space {
-    justify-content: space-between;
+  justify-content: space-between;
 }
 
-.border-test {
-    border: 2px solid red;
-} 
+/* ----    Fonts  & styles   ----*/
 
-
-
-
-
-
-/* ----   text and fonts   ----- */
 .l-space {
   letter-spacing: 2px;
 }
+
 .l-space-sm {
   letter-spacing: 0.7px;
 }
+
 .small {
   font-size: 12px;
 }
+
 .very-small{
   font-size: 10px;
 }
 
+.uppercase {
+  text-transform: uppercase;
+}
+
+.text-left {
+  text-align: left;
+}
+
+::placeholder {
+  text-align: center;  
+}
+
 /* ----    Componentes    ----*/
 
- /* ----  black banner promo ---- */
+/* ----  black banner promo ---- */
 header {
     font-size: 12px;
 }
@@ -67,7 +76,6 @@ header {
 #navbar {
     font-size:14px;
 }
-
 
 nav ul {
     list-style-type: none;
@@ -89,16 +97,16 @@ ul li a {
 
 /* hoverable dropdown */
 
+/* the container oof the dropdown content*/
+.dropdown {
+  position:relative;
+  display: inline-block;
+}
+
 /*the dropdown item*/
 .dropbtn {
   padding:16px;
   border: none;
-}
-
-/* the container oof the dropdown content*/
-.dropdown {
-   position:relative;
-   display: inline-block;
 }
 
 /* content of dropdowm */
@@ -112,21 +120,21 @@ ul li a {
 }
 
   /* links of the dropdown content*/
-  .dropdown-content a {
-    color:black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-  }
+.dropdown-content a {
+  color:black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
 
-  /* dropdowns link hover */
-  .dropdown-content a:hover {background-color: #ddd;}
+/* dropdowns link hover */
+.dropdown-content a:hover {background-color: #ddd;}
 
-  /* Show the dropdown menu on hover */
-  .dropdown:hover .dropdown-content {display: block;}
-  
-  /* Change the background color of the dropdown button when the dropdown content is shown */
-  .dropdown:hover .dropbtn {background-color: #f1f1f1;}
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {display: block;}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {background-color: #f1f1f1;}
 
 /* search form */
 form.example {
@@ -183,15 +191,16 @@ ul img#cart {
   margin-left: 5px;
 }
 
-
+/* Main Title */
 .main-title {
   border-bottom: 1px solid lightgray;
 }
 
-h5::before {
+h6::before {
   content: url("./img/arrow.svg");
 }
 
+/* Side filter bar */
 .side-filter {
     width:23%;
     margin-right:3%;
@@ -203,19 +212,76 @@ h5::before {
   border-bottom: 1px solid lightgray;
 }
 
+/* filter colapse */
+.collapsible {
+  background-color: white;
+  color: black;
+  cursor: pointer;
+  padding: 18px;
+  padding-left:0;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+}
+
+.active, .collapsible:hover {
+  border-bottom: 0;
+}
+
+.collapsible:after {
+  content: '\002B';
+  color: black;
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: "\2212";
+}
+
+.content {
+  padding: 0 18px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+
+
+.red{
+  color:red;
+}
+
+.arrow {
+  border: solid black;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
+}
+
+.right {
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+}
+/* end of Collapsible */
+
 .grid-main {
-    width: 80%;
+width: 80%;
 }
 
 .grid-container {
   display: flex;
   flex-wrap: wrap;
 }
-
+ 
+/* PRODUCT ITEMS!! */
 .item{
   flex: 0 0 33.333333%;
   padding: 2px;
   text-align: left;
+  margin-bottom: 30px;
 }
 
 .item p {
@@ -247,6 +313,7 @@ h5::before {
 .fees {
   font-size: 12px;
 }
+/* End of PRODUCT ITEMS END */
 
 #add-button {
   width: 180px;
@@ -270,76 +337,7 @@ footer button.btn.btn-primary {
   padding: 10px 25px;
 }
 
-/* ----    Fonts  & styles   ----*/
-
-.uppercase {
-  text-transform: uppercase;
-}
-.text-left {
-  text-align: left;
-}
-
-::placeholder {
-  text-align: center;  
-}
-
-
-/* test */
-/* filter colapse */
-.collapsible {
-  background-color: white;
-  color: black;
-  cursor: pointer;
-  padding: 18px;
-  padding-left:0;
-  width: 100%;
-  border: none;
-  text-align: left;
-  outline: none;
-  font-size: 15px;
-  }
-  
-  .active, .collapsible:hover {
-    border-bottom: 0;
-  }
-  
-  .collapsible:after {
-    content: '\002B';
-    color: black;
-    font-weight: bold;
-    float: right;
-    margin-left: 5px;
-  }
-  
-  .active:after {
-    content: "\2212";
-  }
-  
-  .content {
-    padding: 0 18px;
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.2s ease-out;
-    }
-
-  
-  .red{
-    color:red;
-  }
-
-  .arrow {
-    border: solid black;
-    border-width: 0 3px 3px 0;
-    display: inline-block;
-    padding: 3px;
-  }
-  
-  .right {
-    transform: rotate(-45deg);
-    -webkit-transform: rotate(-45deg);
-  }
-
-  /* mobile navbar */
+/* mobile navbar */
 .hamburger {
   display: none;
 }
@@ -367,6 +365,10 @@ div.modal-header {
 
 
 /* breakpoints  */
+
+@media only screen and (max-width: 768px) {
+  
+}
 
 @media only screen and (max-width: 768px) {
 #fixed {
@@ -475,6 +477,13 @@ div.side-filter,#product-count {
 }
 
 /* items */
+.grid-container {
+  flex-direction: column;
+  align-self: center;
+}
+.item {
+  flex: 0;
+}
 
 .promo {
   display: block;
@@ -498,6 +507,7 @@ footer button.btn.btn-primary {
 }
 
 }
+/* END OF BREAKPOINTS */
 
 /* modal buttons */
 
